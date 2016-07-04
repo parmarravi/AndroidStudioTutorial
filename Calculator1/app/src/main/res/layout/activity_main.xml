@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="raviparmar21.blogspot.in.calculator1.MainActivity">
+    tools:context="raviparmar21.blogspot.in.calculator1.MainActivity"
+    android:onClick="onButtonClickListener">
 
     <EditText
         android:layout_width="wrap_content"
@@ -33,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Result"
+        android:text="@string/result"
         android:id="@+id/Result"
         android:layout_below="@+id/CalSum"
         android:layout_centerHorizontal="true"
@@ -42,10 +43,21 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sum"
+        android:text="@string/sum"
         android:id="@+id/CalSum"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="50dp"
+        android:onClick="onClickButton"
         android:layout_below="@+id/NumField2"
-        android:layout_centerHorizontal="true"
-        android:onClick="onClickButton" />
+        android:layout_alignStart="@+id/NumField2" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alert"
+        android:id="@+id/alertbox"
+        android:layout_above="@+id/Result"
+        android:layout_alignEnd="@+id/NumField2"
+        android:onClick="onButtonClickListener" />
+
 </RelativeLayout>
