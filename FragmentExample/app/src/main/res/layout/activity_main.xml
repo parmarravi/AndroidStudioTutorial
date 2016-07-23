@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        tools:context="in.blogspot.raviparmar21.fragmentexample.MainActivity"
+    android:background="#f67656"
+    android:weightSum="1">
+
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="fragment2"
+        android:id="@+id/button2"
+        android:onClick="changeFragments"
+        android:layout_above="@+id/textView"
+        android:layout_alignEnd="@+id/button"
+        android:layout_alignStart="@+id/button" />
+
+    <Button
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="fragment1"
+        android:id="@+id/button"
+        android:onClick="changeFragments"
+        android:layout_above="@+id/button2"
+        android:layout_centerHorizontal="true" />
+
+    <fragment
+        android:name="in.blogspot.raviparmar21.fragmentexample.FragmentOne"
+        android:id="@+id/frag_place"
+        android:layout_width="match_parent"
+        android:layout_height="406dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="49dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Main Activity"
+        android:id="@+id/textView"
+        android:layout_above="@+id/frag_place"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffff" />
+</RelativeLayout>
+
